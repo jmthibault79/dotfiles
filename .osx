@@ -1,0 +1,9 @@
+# prevent .DS_Store file creation over network connections
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+# set host/computer name
+# System Preferences -> Sharing -> Web Sharing
+scutil --set HostName treetop
+scutil --set ComputerName treetop
+scutil --set LocalHostName treetop
+
