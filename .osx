@@ -3,7 +3,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
 # set host/computer name
 # System Preferences -> Sharing -> Web Sharing
-scutil --set HostName treetop
-scutil --set ComputerName treetop
-scutil --set LocalHostName treetop
-
+scutil --set HostName canopy
+scutil --set ComputerName canopy
+scutil --set LocalHostName canopy
+echo "127.0.0.1	canopy" > /etc/hosts
