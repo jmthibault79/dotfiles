@@ -1,0 +1,19 @@
+source ~/.bash-prompt
+source ~/.aliases
+
+export JAVA7_HOME=$(/usr/libexec/java_home -v 1.7)
+export JAVA8_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$JAVA8_HOME
+
+export ANT_OPTS="-Xmx8g"
+export MAVEN_OPTS='-Xmx512m -XX:MaxPermSize=128m'
+export SBT_OPTS=-XX:MaxPermSize=256M
+
+export EDITOR=vim
+
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
+
+# git/hub tab completion
+source /usr/local/etc/bash_completion.d/git-completion.bash
+source /usr/local/etc/bash_completion.d/hub.bash_completion.sh
+
