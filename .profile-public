@@ -6,8 +6,7 @@ export JAVA8_HOME=$(/usr/libexec/java_home -v 1.8)
 export JAVA_HOME=$JAVA8_HOME
 
 export ANT_OPTS="-Xmx8g"
-export MAVEN_OPTS='-Xmx512m -XX:MaxPermSize=128m'
-export SBT_OPTS=-XX:MaxPermSize=256M
+export MAVEN_OPTS='-Xmx512m'
 
 export EDITOR=vim
 
