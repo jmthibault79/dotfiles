@@ -11,3 +11,4 @@ alias java8="JAVA_HOME=$JAVA8_HOME java"
 alias ant7="JAVA_HOME=$JAVA7_HOME ant"
 alias ant8="JAVA_HOME=$JAVA8_HOME ant"
 
+alias hg="history | grep"
