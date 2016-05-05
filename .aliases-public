@@ -13,6 +13,9 @@ alias ant8="JAVA_HOME=$JAVA8_HOME ant"
 
 alias hg="history | grep"
 
+alias mysqlstart='sudo /usr/local/mysql/support-files/mysql.server start'
+alias mysqlstop='sudo /usr/local/mysql/support-files/mysql.server stop'
+
 ############################################
 # Docker Clean
 # From https://www.calazan.com/docker-cleanup-commands/
