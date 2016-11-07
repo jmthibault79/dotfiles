@@ -17,4 +17,21 @@ parse_git_branch_or_tag() {
   echo $OUT
 }
 
-PS1="\[\e[1;30m\][\j:\!\[\e[0;32m\]+${SHLVL}\[\e[1;30m\]]\[\[\e[1;30m\][\[\e[1;34m\]\u@\H\[\e[1;30m\]:\[\e[1;37m\]\w\[\e[1;33m\]\$(parse_git_branch_or_tag)\[\e[1;30m\]] \[\e[0;37m\]\$ "
+# bug: was not wrapping correctly.
+# Be sure to escape color sequences so bash doesn't count them in line lengths.
+# http://mywiki.wooledge.org/BashFAQ/053
+# http://askubuntu.com/a/24422
+
+ps1_reset=$(tput sgr0)   
+ps1_boldyellow=$(tput setaf 3)$(tput bold)
+ps1_boldwhite=$(tput setaf 7)$(tput bold) 
+
+ps1_username='\u'
+ps1_hostname='\h'
+ps1_workingdir='\w'
+
+ps1_a="$ps1_username@$ps1_hostname"
+ps1_b="\[$ps1_boldwhite\]$ps1_workingdir\[$ps1_reset\]"
+ps1_c="\[$ps1_boldyellow\]\$(parse_git_branch_or_tag)\[$ps1_reset\]"
+
+PS1="$ps1_a $ps1_b $ps1_c \\$ "
