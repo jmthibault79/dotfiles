@@ -1,2 +1,5 @@
 # https://superuser.com/questions/46948/any-way-to-fix-screens-mishandling-of-line-wrap-maybe-only-terminal-app
 set horizontal-scroll-mode off
+
+# https://relativkreativ.at/articles/why-chaining-commands-with-pipes-in-mac-os-x-does-not-always-work
+"\xC2\xA0": " "
