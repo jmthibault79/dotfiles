@@ -1,3 +1,6 @@
+# source .profile with each new screen (i.e. treat as login shell)
+shell -$SHELL
+
 # don't display the copyright page
 startup_message off
 
