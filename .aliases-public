@@ -14,6 +14,8 @@ alias java8="JAVA_HOME=$JAVA8_HOME java"
 alias ant7="JAVA_HOME=$JAVA7_HOME ant"
 alias ant8="JAVA_HOME=$JAVA8_HOME ant"
 
+alias gtc="./gradlew clean compileTestJava"
+
 alias hg="history | grep"
 
 alias mysqlstart='sudo /usr/local/mysql/support-files/mysql.server start'
