@@ -15,6 +15,7 @@ alias ant7="JAVA_HOME=$JAVA7_HOME ant"
 alias ant8="JAVA_HOME=$JAVA8_HOME ant"
 
 alias gtc="./gradlew clean compileTestJava"
+alias grc="gtc && git rebase --continue"
 
 alias hg="history | grep"
 
