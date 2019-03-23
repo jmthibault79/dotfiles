@@ -8,11 +8,8 @@ alias frd="git fetch && git rebase -i origin/develop"
 alias frm="git fetch && git rebase -i origin/master"
 alias subsync="git submodule update --init --recursive"
 
-alias java7="JAVA_HOME=$JAVA7_HOME java"
 alias java8="JAVA_HOME=$JAVA8_HOME java"
-
-alias ant7="JAVA_HOME=$JAVA7_HOME ant"
-alias ant8="JAVA_HOME=$JAVA8_HOME ant"
+alias java11="JAVA_HOME=$JAVA11_HOME java"
 
 alias gtc="./gradlew clean compileTestJava"
 alias grc="gtc && git rebase --continue"

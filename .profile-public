@@ -2,7 +2,7 @@ source ~/.bash-prompt
 source ~/.aliases
 
 export JAVA8_HOME=$(/usr/libexec/java_home -v 1.8)
-export JAVA10_HOME=$(/usr/libexec/java_home -v 10)
+export JAVA11_HOME=$(/usr/libexec/java_home -v 11)
 export JAVA_HOME=$JAVA8_HOME
 
 export ANT_OPTS="-Xmx8g"
