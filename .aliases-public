@@ -19,6 +19,9 @@ alias hg="history | grep"
 alias mysqlstart='sudo /usr/local/mysql/support-files/mysql.server start'
 alias mysqlstop='sudo /usr/local/mysql/support-files/mysql.server stop'
 
+# gsed = gnu sed on Mac OSX
+alias stripansi="gsed $'s,\x1b\\[[0-9;]*[a-zA-Z],,g'"
+
 ############################################
 # Docker Clean
 # From https://www.calazan.com/docker-cleanup-commands/
