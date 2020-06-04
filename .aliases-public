@@ -2,7 +2,7 @@ alias javadebug="java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,a
 alias antdebug="ant -Dtest.debug=true -Dtest.debug.port=33054"
 alias sbtdebug="sbt -jvm-debug 33054"
 
-alias pullprune="git pull --ff-only --prune && git lfs pull"
+alias pullprune="git pull --ff-only --prune"
 alias fr="git fetch && git rebase -i"
 alias frd="git fetch && git rebase -i origin/develop"
 alias frm="git fetch && git rebase -i origin/master"
