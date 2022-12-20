@@ -15,6 +15,8 @@ alias rehead="git reset --hard HEAD"
 
 alias gtc="./gradlew clean compileTestJava"
 alias grc="gtc && git rebase --continue"
+alias gdno="git diff --name-only"
+
 alias gpc="gh pr checkout"
 
 alias hg="history | grep"
