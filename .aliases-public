@@ -17,8 +17,8 @@ alias pullprune="git pull --ff-only --prune && subsync"
 alias gtc="./gradlew clean compileTestJava"
 alias grc="gtc && git rebase --continue"
 alias gdno="git diff --name-only"
-
 alias gpc="gh pr checkout"
+alias gmf="git fetch && git merge --ff-only"
 
 alias hg="history | grep"
 
