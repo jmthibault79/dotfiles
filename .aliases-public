@@ -14,11 +14,10 @@ alias subsync="git submodule update -f --init --recursive"
 alias rehead="git reset --hard HEAD"
 alias pullprune="git pull --ff-only --prune && subsync"
 
-alias gtc="./gradlew clean compileTestJava"
-alias grc="gtc && git rebase --continue"
+alias gdh="git diff HEAD"
 alias gdno="git diff --name-only"
-alias gpc="gh pr checkout"
 alias gmf="git fetch && git merge --ff-only"
+alias gpc="gh pr checkout"
 
 alias hg="history | grep"
 
