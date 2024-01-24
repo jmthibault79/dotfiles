@@ -12,7 +12,7 @@ export MAVEN_OPTS='-Xmx512m'
 
 export EDITOR=vim
 
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$JAVA17_HOME/bin:~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 
 # stop Apple's nagging to switch to zsh

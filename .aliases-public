@@ -2,10 +2,10 @@ alias javadebug="java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,a
 alias antdebug="ant -Dtest.debug=true -Dtest.debug.port=33054"
 alias sbtdebug="sbt -jvm-debug 33054"
 
-alias java8="export JAVA_HOME=$JAVA8_HOME"
-alias java11="export JAVA_HOME=$JAVA11_HOME"
-alias java17="export JAVA_HOME=$JAVA17_HOME"
-alias java21="export JAVA_HOME=$JAVA21_HOME"
+alias java8="export JAVA_HOME=$JAVA8_HOME; export PATH=$JAVA8_HOME/bin:$PATH"
+alias java11="export JAVA_HOME=$JAVA11_HOME; export PATH=$JAVA11_HOME/bin:$PATH"
+alias java17="export JAVA_HOME=$JAVA17_HOME; export PATH=$JAVA17_HOME/bin:$PATH"
+alias java21="export JAVA_HOME=$JAVA21_HOME; export PATH=$JAVA21_HOME/bin:$PATH"
 
 alias fr="git fetch && git rebase -i"
 alias frd="git fetch && git rebase -i origin/develop"
