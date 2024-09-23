@@ -15,9 +15,18 @@ bind ^S
 bind ^Q
 
 # status line at the bottom
+
 hardstatus on
 hardstatus alwayslastline
-hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+# screen 4 line - looks bad in screen 5
+
+# %H means hostname
+# %= means expand to fill remaining space
+# %n means current tab number
+# %t means current tab titl
+# %-w means tabs before this one / %+w means tabs after
+hardstatus string '[ %H ] %= %-w(%n) %t%+w'
 
 # correct bad line wrapping
 # https://superuser.com/questions/46948/any-way-to-fix-screens-mishandling-of-line-wrap-maybe-only-terminal-app
