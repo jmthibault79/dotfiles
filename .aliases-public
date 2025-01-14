@@ -53,7 +53,7 @@ alias runtest='./project.rb test --tests'
 
 alias lintjava='./gradlew spotlessApply'
 
-alias compile='./gradlew clean && ./gradlew compileGeneratedJava compileJava compileTestJava compile__tools__java compile__bigQueryTest__java compile__contractTest__java compile__integration__java spotlessApply'
+alias compile='./gradlew clean && ./gradlew compileGeneratedJava compileJava compileTestJava compile__tools__java compile__bigQueryTest__java compile__integration__java spotlessApply'
 
 alias deps='./gradlew dependencies'
 
