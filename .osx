@@ -1,9 +1,2 @@
 # prevent .DS_Store file creation over network connections
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
-
-# set host/computer name
-# System Preferences -> Sharing -> Web Sharing
-scutil --set HostName canopy
-scutil --set ComputerName canopy
-scutil --set LocalHostName canopy
-echo "127.0.0.1	canopy" > /etc/hosts
