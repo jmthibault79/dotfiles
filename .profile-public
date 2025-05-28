@@ -12,6 +12,15 @@ export MAVEN_OPTS='-Xmx512m'
 
 export EDITOR=vim
 
+# e2e hack for M1 Mac
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+
+# for e2ev2
+export PUPPETEER_EXECUTABLE_PATH=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+export API_PROXY_URL=http://localhost:8080
+export UI_URL_ROOT=https://all-of-us-workbench-test.appspot.com
+
+
 # stop Apple's nagging to switch to zsh
 # https://www.addictivetips.com/mac-os/hide-default-interactive-shell-is-now-zsh-in-terminal-on-macos/
 export BASH_SILENCE_DEPRECATION_WARNING=1

@@ -1,7 +1,12 @@
+# general java
+# "HOME" env vars are defined in .profile-public
+
 alias java8="export JAVA_HOME=$JAVA8_HOME; export PATH=$JAVA8_HOME/bin:$PATH"
 alias java11="export JAVA_HOME=$JAVA11_HOME; export PATH=$JAVA11_HOME/bin:$PATH"
 alias java17="export JAVA_HOME=$JAVA17_HOME; export PATH=$JAVA17_HOME/bin:$PATH"
 alias java21="export JAVA_HOME=$JAVA21_HOME; export PATH=$JAVA21_HOME/bin:$PATH"
+
+# general git 
 
 alias fr="git fetch && git rebase -i"
 alias frd="git fetch && git rebase -i origin/develop"
@@ -15,6 +20,7 @@ alias gdh="git diff HEAD"
 alias gdno="git diff --name-only"
 alias gmf="git fetch && git merge --ff-only"
 alias gpc="gh pr checkout"
+
 
 alias hg="history | grep"
 
@@ -46,17 +52,6 @@ alias dockerprune='docker system prune'
 # All of Us Researcher Workbench public aliases
 #################################################################
 
-# example: runtest org.pmiops.workbench.db.model.StorageEnumsTest
-# example: runtest org.pmiops.workbench.db.model.StorageEnumsTest.test_noMissingMapEntries
-# example: runtest org.pmiops.workbench.db.model.*
-alias runtest='./project.rb test --tests'
-
-alias lintjava='./gradlew spotlessApply'
-
-alias compile='./gradlew clean && ./gradlew compileGeneratedJava compileJava compileTestJava compile__tools__java compile__bigQueryTest__java compile__integration__java spotlessApply'
-
-alias deps='./gradlew dependencies'
-
 alias googletoken='gcloud auth print-access-token'
 alias curltoken='curl -H "Authorization: Bearer `googletoken`" ' 
 alias curlcookie='curl --cookie "FCtoken=`googletoken` ' 
@@ -64,3 +59,51 @@ alias curljson='curl -H "Authorization: Bearer `googletoken`" -H "Content-Type: 
 
 # After gcloud auth login <email>, opens a website with user info, including subject ID
 alias googleinfo='open https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=$(gcloud auth print-access-token)'
+
+# API
+
+alias compile='./gradlew clean && ./gradlew compileGeneratedJava compileJava compileTestJava compile__tools__java compile__bigQueryTest__java compile__integration__java spotlessApply'
+
+alias lintjava='./gradlew spotlessApply'
+
+alias deps='./gradlew dependencies'
+
+# example: runtest org.pmiops.workbench.db.model.StorageEnumsTest
+# example: runtest org.pmiops.workbench.db.model.StorageEnumsTest.test_noMissingMapEntries
+# example: runtest org.pmiops.workbench.db.model.*
+alias runtest='./project.rb test --tests'
+
+# Local API
+
+alias apidb='authp && rm -f sa-key.json && ./project.rb connect-to-db'
+alias apiconfig='./gradlew loadConfig -Pconfig_key=main -Pconfig_file=config/config_local.json'
+
+# UI
+
+alias cleanui='yarn install && yarn cache clean && ./node_modules/jest/bin/jest.js --clearCache'
+alias buildui='cleanui && ./project.rb build --environment test'
+alias testui='cleanui && yarn test --no-watch --no-progress --browsers=ChromeHeadless'
+alias circletestui='cleanui && yarn test --runInBand'
+alias lintui='buildui && yarn lint --fix'
+alias lnt='lintui && testui'
+
+# e2e
+
+alias cleane2e='yarn install && yarn clean && npx tsc -p tsconfig.json && npx rimraf tsc-out'
+
+# M1 hack
+alias yarnm1e2e="find node_modules/puppeteer -name '*.js' | xargs sed -i '' \"s%/usr/bin/chromium-browser%\$(which chromium)%g\" && yarn"
+
+# e2ev2
+
+alias apiproxy='PROXY_MODE=replay-only node startproxy.mjs 8080'
+
+# DBs
+
+alias testdb='./project.rb connect-to-cloud-db --project=all-of-us-workbench-test'
+alias stagingdb='./project.rb connect-to-cloud-db --project=all-of-us-rw-staging'
+alias stabledb='./project.rb connect-to-cloud-db --project=all-of-us-rw-stable'
+alias preproddb='./project.rb connect-to-cloud-db --project=all-of-us-rw-preprod'
+alias proddb='./project.rb connect-to-cloud-db --project=all-of-us-rw-prod'
+
+
